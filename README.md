@@ -5,7 +5,15 @@
 - Kotlin 1.3.61
 - Gradle 4.9
 
-test
+## generate ci/cd command
+
+```
+java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o ~/Downloads/kotlin \
+--additional-properties=serializationLibrary=gson --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime \
+--git-user-id "hyounoo" \
+ --git-repo-id "ch-api-client-kotlin" \
+ --release-note "GitHub integration demo" \
+```
 
 ## Build
 
